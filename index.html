@@ -639,16 +639,15 @@ td:first-child { color: var(--ink); font-weight: 500; font-size: 13px; }
     <a class="nav-link" href="#setup">2. Sign Up & Setup</a>
     <a class="nav-link" href="#skills">3. Claude Skills</a>
     <a class="nav-link" href="#connectors">4. Connectors</a>
-    <a class="nav-link" href="#jira">5. Jira & Confluence</a>
-    <a class="nav-link" href="#rules">6. Rules & Instructions</a>
-    <a class="nav-link" href="#projects">7. Projects & Scopes</a>
-    <a class="nav-link" href="#safe">8. Safe & Responsible Use</a>
+    <a class="nav-link" href="#rules">5. Rules & Instructions</a>
+    <a class="nav-link" href="#projects">6. Projects & Scopes</a>
+    <a class="nav-link" href="#safe">7. Safe & Responsible Use</a>
+    <a class="nav-link" href="#example-project">8. Example Project</a>
+    <a class="nav-link" href="#tips">9. Tips &amp; Learn More</a>
+    <a class="nav-link" href="#workflow">10. Workflow Example</a>
 
     <div class="nav-group-label" style="margin-top:12px">Appendices</div>
-    <a class="nav-link" href="#example-project">9. Example Project</a>
-    <a class="nav-link" href="#tips">10. Tips &amp; Learn More</a>
-    <a class="nav-link" href="#admin">A. Admin Setup</a>
-    <a class="nav-link" href="#tech">B. Technical Reference</a>
+    <a class="nav-link" href="#tech">A. Technical Reference</a>
   </div>
 
   <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
@@ -723,7 +722,7 @@ td:first-child { color: var(--ink); font-weight: 500; font-size: 13px; }
 
       <div class="callout info">
         <div class="callout-label">ℹ Data & Privacy</div>
-        <p style="margin:0">On the 2550 Engineering Team plan, Anthropic does <strong>not</strong> use your conversations to train its models. Your prompts and outputs are processed by Anthropic infrastructure but are not retained for model training. See Section 8 for the full picture.</p>
+        <p style="margin:0">On the 2550 Engineering Team plan, Anthropic does <strong>not</strong> use your conversations to train its models. Your prompts and outputs are processed by Anthropic infrastructure but are not retained for model training. See Section 7 for the full picture.</p>
       </div>
     </section>
 
@@ -760,7 +759,7 @@ td:first-child { color: var(--ink); font-weight: 500; font-size: 13px; }
       <h2>First Steps After Setup</h2>
       <ul>
         <li>Start a conversation at claude.ai and ask Claude something relevant to your current work.</li>
-        <li>Create your first Project (Section 7) to keep your work organised and contextual.</li>
+        <li>Create your first Project (Section 6) to keep your work organised and contextual.</li>
         <li>Browse Skills (Section 3) and enable ones relevant to your role.</li>
         <li>Ask your manager or admin which Connectors are approved for your team (Section 4).</li>
       </ul>
@@ -955,60 +954,9 @@ Keep your tone direct but constructive — assume the author cares about quality
 
     <div class="section-divider"></div>
 
-    <!-- ── 5. Jira / Confluence ── -->
-    <section id="jira">
-      <span class="section-number">05</span>
-      <h1>Connecting Claude to 2550's Jira & Confluence</h1>
-
-      <div class="callout info">
-        <div class="callout-label">ℹ Setup Required</div>
-        <p style="margin:0">The Jira &amp; Confluence integration must be configured by your Claude admin before it is available. Contact your admin to find out whether this has been enabled for your team and how to access it.</p>
-      </div>
-
-      <h2>How It Works</h2>
-      <p>The integration between Claude and 2550's Atlassian tools is managed at the admin level via <strong>Claude Tag</strong> — Anthropic's AI agent. This is not a connector individual users set up; it is configured by your Claude admin and then made available to your team in agreed channels or workspaces.</p>
-
-      <h2>What Claude Can Do</h2>
-      <ul>
-        <li>Read and search Confluence pages and spaces that the service account has access to.</li>
-        <li>Read, summarise, and comment on Jira issues.</li>
-        <li>Help draft or update Jira issue descriptions when given permission.</li>
-        <li>Cross-reference information between Jira tickets and Confluence documentation.</li>
-      </ul>
-
-      <h2>How Access Is Scoped</h2>
-      <p>Claude's access to Jira and Confluence is governed entirely by a <strong>dedicated service account</strong> created specifically for Claude. This account is given access <em>only</em> to the Jira projects and Confluence spaces that 2550 Engineering has agreed Claude should see.</p>
-
-      <div class="callout ok">
-        <div class="callout-label">✅ What This Means for You</div>
-        <p style="margin:0 0 8px">Claude cannot access any Jira project or Confluence space that the dedicated service account has not been granted access to — it is technically impossible. If you ask Claude to look at a page or ticket it does not have access to, it will tell you it cannot find it.</p>
-      </div>
-
-      <div class="callout danger">
-        <div class="callout-label">🚫 Do Not Attempt the Following</div>
-        <ul class="dont-list">
-          <li><span class="icon">✗</span><span>Try to grant Claude access to additional Jira projects or Confluence spaces without going through your admin — including sharing API tokens or adding Claude to projects directly.</span></li>
-          <li><span class="icon">✗</span><span>Use Claude to extract and redistribute Confluence content to external services, public GitHub repos, or anywhere outside the company.</span></li>
-          <li><span class="icon">✗</span><span>Ask Claude to create, delete, or modify Confluence spaces or Jira projects — these are admin-level operations.</span></li>
-        </ul>
-      </div>
-
-      <h2>How to Use Claude with Jira & Confluence</h2>
-      <p>Once your admin has confirmed the integration is active, you can ask Claude natural-language questions about your Jira projects and Confluence spaces via your agreed access point. Examples of what you can ask:</p>
-      <ul>
-        <li>Summarise the key decisions in the Q3 Architecture Confluence space.</li>
-        <li>What is the current status of PROJ-456? Any recent comments?</li>
-        <li>Find all open Jira tickets assigned to me in the Platform project.</li>
-        <li>Draft a Jira comment summarising the discussion in this thread.</li>
-      </ul>
-      <p>Contact your admin to confirm where and how to access this feature once it has been set up for your team.</p>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- ── 6. Rules ── -->
+    <!-- ── 5. Rules ── -->
     <section id="rules">
-      <span class="section-number">06</span>
+      <span class="section-number">05</span>
       <h1>Setting Up Claude Rules & Instructions</h1>
 
       <h2>What Are Project Instructions?</h2>
@@ -1072,7 +1020,7 @@ Output:
 
     <!-- ── 7. Projects ── -->
     <section id="projects">
-      <span class="section-number">07</span>
+      <span class="section-number">06</span>
       <h1>Creating Projects & Scopes</h1>
 
       <h2>What Are Claude Projects?</h2>
@@ -1084,7 +1032,7 @@ Output:
         <li>Open Claude at claude.ai or in the desktop app.</li>
         <li>Click <strong>Projects</strong> in the left sidebar, or the <strong>+ New Project</strong> button.</li>
         <li>Give it a clear, descriptive name — e.g. "Backend API — Billing Service" or "Platform Incident Runbooks".</li>
-        <li>Add your Project Instructions (Section 6).</li>
+        <li>Add your Project Instructions (Section 5).</li>
         <li>Upload relevant documents to the knowledge base.</li>
       </ol>
 
@@ -1130,7 +1078,7 @@ Output:
 
     <!-- ── 8. Safe Use ── -->
     <section id="safe">
-      <span class="section-number">08</span>
+      <span class="section-number">07</span>
       <h1>Safe & Responsible Use</h1>
       <p>This is the most important section. It applies to everyone, regardless of technical background.</p>
 
@@ -1163,7 +1111,7 @@ Output:
 
       <h2>Keeping Claude Scoped to Approved Tasks</h2>
       <ul>
-        <li>Create a Project with clear instructions that define what Claude should and should not help with (Sections 6 and 7).</li>
+        <li>Create a Project with clear instructions that define what Claude should and should not help with (Sections 5 and 6).</li>
         <li>Only connect Connectors from the approved list for your team.</li>
         <li>Do not grant Claude access to services, files, or data beyond what your specific task requires.</li>
         <li>If Claude suggests taking an action that feels outside its approved scope, decline it and report it to your Claude admin.</li>
@@ -1193,10 +1141,11 @@ Output:
 
     <div class="section-divider"></div>
 
-    <!-- ── Appendix A ── -->
+    <!-- ── 8. Example Project ── -->
 
     <section id="example-project">
-      <h1>9. Example Project Setup</h1>
+      <span class="section-number">08</span>
+      <h1>Example Project Setup</h1>
       <p>The best way to understand Claude Projects is to see one built from scratch. Below is a realistic walkthrough for a software engineer joining a backend team — but the same pattern applies to any discipline: product management, data analysis, technical writing, and more.</p>
 
       <h2>The Scenario</h2>
@@ -1318,9 +1267,12 @@ def test_get_invoice_cannot_access_other_users_invoice(
       </div>
     </section>
 
+    <div class="section-divider"></div>
 
+    <!-- ── 9. Tips ── -->
     <section id="tips">
-      <h1>10. Hints &amp; Tips</h1>
+      <span class="section-number">09</span>
+      <h1>Hints &amp; Tips</h1>
       <p>Small habits make a big difference with Claude. These tips are drawn from Anthropic's prompting guidance and practical experience — they apply whether you're drafting an email or building a complex workflow.</p>
 
       <div class="tips-grid">
@@ -1424,107 +1376,99 @@ def test_get_invoice_cannot_access_other_users_invoice(
       </div>
     </section>
 
-    <section id="admin">
-      <div class="appendix-badge">APPENDIX A · ADMINS ONLY</div>
-      <h1>Admin Setup: Jira & Confluence Integration</h1>
-      <p>This appendix is for Claude admins at 2550 Engineering configuring the Jira and Confluence integration. End users do not need to read this section.</p>
+    <div class="section-divider"></div>
 
-      <h2>Overview</h2>
-      <p>The integration works through Claude Tag — Anthropic's Slack agent. It uses an HTTP API connection authenticated by a dedicated Atlassian service account. Claude's access is determined entirely by what the service account can access. This is your primary governance mechanism.</p>
+    <!-- ── 10. Workflow Example ── -->
+    <section id="workflow">
+      <span class="section-number">10</span>
+      <h1>Workflow Example</h1>
+      <p>Claude is most powerful when you treat it less like a search engine and more like a capable colleague you brief properly before handing over work. The workflow below reflects how experienced users get the most out of it — and it applies whether you're writing a report, building software, or designing a presentation.</p>
 
-      <h2>Step 1 — Create a Dedicated Atlassian Account</h2>
-      <p>Create a dedicated Atlassian account specifically for Claude (e.g. <code>claude@2550.engineering</code>). Do not use a personal account.</p>
+      <h2>Step 1 — Set Up a Scoped Project First</h2>
+      <p>Before starting any significant piece of work, create a dedicated Claude Project (Section 6). Give it a specific name and write Project Instructions (Section 5) that tell Claude exactly what it's helping you with: the stack, the conventions, the output style, the things to avoid. A well-briefed project means you don't repeat yourself across conversations — Claude already knows the context when you open a new chat.</p>
+      <div class="callout callout-tip">
+        <strong>Think of it as onboarding Claude to your project.</strong> The time you spend writing good instructions pays back immediately — every conversation in that project benefits from them automatically.
+      </div>
+
+      <h2>Step 2 — Be Explicit About the Output Format</h2>
+      <p>Claude can produce many different kinds of output, and it will do a far better job if you tell it exactly what you need. Before asking Claude to produce something, decide: what format should the result be in? Some options to consider:</p>
       <ul>
-        <li>Add this account to <em>only</em> the Jira projects it should access.</li>
-        <li>Grant access to <em>only</em> the Confluence spaces it should read.</li>
-        <li>Give it the minimum permissions needed — read access in most cases.</li>
+        <li><strong>Claude Code prompts</strong> — if you're handing the work to Claude Code (the terminal-based coding agent), ask Claude to generate a ready-to-paste prompt you can use there. This is often the most effective way to translate a high-level idea into working code: Claude (chat) writes the engineering brief, Claude Code executes it.</li>
+        <li><strong>Claude Design prompts</strong> — similarly, ask Claude to write a detailed design brief for Claude Design or another design tool, describing the layout, palette, and component structure.</li>
+        <li><strong>A structured document</strong> — PDF, Word doc, or a formatted Confluence page. Telling Claude the destination format (e.g. "format this as a Confluence wiki page with headings and a table") changes how it structures the output.</li>
+        <li><strong>A checklist or decision matrix</strong> — useful when you need to review options rather than act on a single answer.</li>
+      </ul>
+      <div class="callout info">
+        <div class="callout-label">💡 Get Claude to write the prompt</div>
+        <p style="margin:0">One of the most effective patterns: ask Claude (in a chat window) to write a detailed prompt for Claude Code to implement something. Claude understands its own capabilities and will produce a better-specified brief than most people would write by hand. Then paste it into Claude Code and let it run.</p>
+      </div>
+
+      <h2>Step 3 — Use Plan Mode Before You Commit</h2>
+      <p>Before Claude takes any significant action — writing a large amount of code, restructuring a document, sending an output somewhere — use <strong>Plan mode</strong>. In Plan mode, Claude describes exactly what it intends to do and asks for your confirmation before proceeding. This lets you:</p>
+      <ul>
+        <li>Catch misunderstandings early, before Claude does unnecessary work.</li>
+        <li>Understand Claude's approach and redirect it if needed.</li>
+        <li>Review the plan with a colleague before approving execution.</li>
+        <li>Feel confident that irreversible actions (deleting files, posting content) have a human checkpoint.</li>
+      </ul>
+      <p>To enter Plan mode, type <code>/plan</code> at the start of your message, or ask Claude to "describe what you'd do before doing it." Get comfortable with this habit — it saves significant time and avoids having to undo things.</p>
+
+      <h2>Step 4 — Always Verify the Output</h2>
+      <p>Claude is capable but not infallible. Treat its output as a first draft — review it before acting on it, publishing it, or committing it to a codebase. The right verification method depends on the work:</p>
+      <ul>
+        <li><strong>Code:</strong> run it, read it, test it. A second AI tool can help — Cursor and GitHub Copilot are well-regarded for reviewing Claude-generated code. They may catch different things because they use different models. Using multiple AI tools in combination is a reasonable professional practice.</li>
+        <li><strong>Documents and plans:</strong> read them. Ask a colleague to review the logic, especially for anything that will be shared externally or used to make decisions.</li>
+        <li><strong>Data or research:</strong> check the sources. Claude can hallucinate citations or misremember details — verify anything you plan to rely on.</li>
       </ul>
       <div class="callout warn">
-        <div class="callout-label">⚠ Principle of Least Privilege</div>
-        <p style="margin:0">The service account's permissions are the ceiling for what Claude can access. Start narrow and expand only when a clear business need is confirmed.</p>
+        <div class="callout-label">⚠ Never skip review on high-stakes outputs</div>
+        <p style="margin:0">Code going to production, documents with legal or financial implications, and anything shared externally should always have a human review step — regardless of how confident Claude sounds.</p>
       </div>
 
-      <h2>Step 2 — Generate an API Token</h2>
-      <ol>
-        <li>Sign in as the dedicated service account at id.atlassian.com.</li>
-        <li>Navigate to <strong>Profile → Security → API tokens</strong>.</li>
-        <li>Click <strong>Create API token</strong> and give it a descriptive name (e.g. "Claude Tag Integration — 2550").</li>
-        <li>Copy the token immediately — Atlassian only shows it once. Store it in your secrets vault.</li>
-      </ol>
-
-      <h2>Step 3 — Configure the Access Bundle</h2>
-      <ol>
-        <li>Go to <code>claude.ai/admin-settings/claude-tag</code>.</li>
-        <li>Navigate to <strong>Access bundles</strong> → open or create a bundle (e.g. "2550 — Atlassian Access").</li>
-        <li>Go to the <strong>Credentials</strong> tab and click <strong>Connect another tool</strong>.</li>
-        <li>Fill in the connection details:</li>
-      </ol>
-
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>Field</th><th>Value</th></tr></thead>
-          <tbody>
-            <tr><td>Name</td><td>Atlassian (Jira and Confluence)</td></tr>
-            <tr><td>Credential type</td><td><strong>Basic</strong> — Atlassian Cloud uses HTTP Basic auth, NOT Bearer</td></tr>
-            <tr><td>Username</td><td>The dedicated service account's email address</td></tr>
-            <tr><td>Password</td><td>The API token generated in Step 2</td></tr>
-            <tr><td>Allowed websites</td><td>your-domain.atlassian.net (e.g. 2550engineering.atlassian.net)</td></tr>
-          </tbody>
-        </table>
+      <h2>Step 5 — Run Multiple Chats in Parallel</h2>
+      <p>You are not limited to one Claude conversation at a time. Experienced users routinely keep several windows open — the browser app and the desktop app can run side by side, giving you two visible Claude sessions at once. This opens up useful parallel workflows:</p>
+      <ul>
+        <li>While Claude writes code or a document in one tab, use another tab to verify facts, search for references, or prepare the next task.</li>
+        <li>Set a long or intensive task running in one window — something that will take Claude several minutes to work through — then switch to a second window and keep working on something else while you wait.</li>
+        <li>Use one chat for high-level planning (writing the brief, deciding the approach) and a separate project-specific chat for execution, so your planning conversation stays clean.</li>
+        <li>Keep a "scratchpad" chat open for quick questions, lookups, or experiments that you don't want polluting your main project context.</li>
+      </ul>
+      <div class="callout callout-tip">
+        <strong>Browser + Desktop = two simultaneous views.</strong> Open Claude in your browser and keep the desktop app on your second monitor. You get two Claude sessions visible at the same time with no tab-switching.
       </div>
 
-      <ol start="5">
-        <li>Save the connection.</li>
-        <li>Attach the Jira/Confluence plugin to this bundle — the credential alone is not enough; the plugin teaches Claude how to call the Atlassian APIs correctly.</li>
-      </ol>
+      <h2>Going Further: Real Workflows from Real Users</h2>
+      <p>The best way to build your own workflow intuition is to see how experienced practitioners use Claude day-to-day. Anthropic's own documentation covers common real-world workflows, and Boris Cherny — creator of Claude Code — shares his personal workflow on X, including how he chains prompts, manages context, and moves between planning and execution. Both are worth reading once you're comfortable with the basics.</p>
 
-      <div class="callout info">
-        <div class="callout-label">ℹ Atlassian Data Center (Self-Hosted)</div>
-        <p style="margin:0">If 2550 uses self-hosted Atlassian Data Center, the credential type is <strong>Bearer</strong> (personal access token, not Basic), and the instance must be publicly reachable by Anthropic infrastructure.</p>
-      </div>
+      <a href="https://code.claude.com/docs/en/common-workflows" target="_blank" rel="noopener" style="display:block; margin: 20px 0 12px; text-decoration:none;">
+        <div style="border: 1px solid var(--border); border-radius: 10px; padding: 18px 22px; background: var(--surface); display: flex; align-items: flex-start; gap: 16px; transition: border-color 0.15s;">
+          <div style="font-size: 22px; line-height:1; flex-shrink:0; margin-top:2px;">📖</div>
+          <div>
+            <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; color: var(--ink); font-size: 15px; margin-bottom: 4px;">Common Workflows — Claude Code Docs</div>
+            <div style="color: var(--ink-2); font-size: 14px; line-height: 1.5;">Anthropic's official guide to real-world Claude workflows — explore-plan-code-commit cycles, test-driven development, visual iteration, and more practical patterns from the team that built it.</div>
+            <div style="color: var(--muted); font-size: 13px; margin-top: 8px;">code.claude.com · official docs</div>
+          </div>
+        </div>
+      </a>
 
-      <h2>Step 4 — Scope Access to Specific Channels</h2>
-      <p>Attach the bundle only to the channels or workspaces where Jira/Confluence access is appropriate. To restrict Claude Tag to specific channels only: set the org-wide default to <em>Off</em>, then enable Claude individually in each approved channel.</p>
+      <a href="https://x.com/bcherny/status/2007179832300581177" target="_blank" rel="noopener" style="display:block; margin: 12px 0; text-decoration:none;">
+        <div style="border: 1px solid var(--border); border-radius: 10px; padding: 18px 22px; background: var(--surface); display: flex; align-items: flex-start; gap: 16px; transition: border-color 0.15s;">
+          <div style="font-size: 24px; line-height:1; flex-shrink:0; margin-top:2px;">𝕏</div>
+          <div>
+            <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; color: var(--ink); font-size: 15px; margin-bottom: 4px;">Boris Cherny (@bcherny)</div>
+            <div style="color: var(--ink-2); font-size: 14px; line-height: 1.5;">"Here's my simple workflow for using Claude Code..." — a practical breakdown of how the creator of Claude Code actually uses it, from scoping to verification. Worth bookmarking.</div>
+            <div style="color: var(--muted); font-size: 13px; margin-top: 8px;">x.com · @bcherny</div>
+          </div>
+        </div>
+      </a>
 
-      <h2>Verifying the Connection</h2>
-      <ol>
-        <li>In a Slack channel covered by the bundle, start a new thread.</li>
-        <li>Ask: <code>@Claude Can you find Jira ticket [PROJ-123] for me?</code></li>
-        <li>Claude should respond with the ticket details.</li>
-        <li>Verify in Atlassian's audit log that the call appeared under the dedicated service account.</li>
-      </ol>
-
-      <h2>Admin Controls Reference</h2>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>Control</th><th>Who</th><th>Where</th></tr></thead>
-          <tbody>
-            <tr><td>Create / edit / delete Access bundles</td><td>Owner only</td><td>claude.ai/admin-settings/claude-tag</td></tr>
-            <tr><td>Edit credentials in a bundle</td><td>Owner or Admin</td><td>Bundle → Credentials tab</td></tr>
-            <tr><td>Restrict Claude Tag to specific channels</td><td>Owner</td><td>Set org default to Off; enable per channel</td></tr>
-            <tr><td>Block specific tool actions</td><td>Owner or Admin</td><td>Bundle → Tools tab → Blocked</td></tr>
-            <tr><td>Set spend limits</td><td>Owner</td><td>claude.ai/admin-settings/usage/claude-tag</td></tr>
-            <tr><td>Disable Claude in direct messages</td><td>Owner</td><td>Toggle in Claude Tag settings</td></tr>
-            <tr><td>Remove Claude from a channel</td><td>Owner / Admin / channel member</td><td>/remove @Claude in the relevant channel</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h2>Rotating Credentials</h2>
-      <ol>
-        <li>Generate a new API token in Atlassian (id.atlassian.com → Security → API tokens).</li>
-        <li>Go to the Access bundle in claude.ai/admin-settings/claude-tag.</li>
-        <li>Edit the Atlassian connection and update the Password field with the new token.</li>
-        <li>Save. The new credential takes effect on the next Claude Tag thread.</li>
-        <li>Revoke the old API token in Atlassian immediately after.</li>
-      </ol>
     </section>
 
     <div class="section-divider"></div>
 
-    <!-- ── Appendix B ── -->
+    <!-- ── Appendix A ── -->
     <section id="tech">
-      <div class="appendix-badge">APPENDIX B · TECHNICAL</div>
+      <div class="appendix-badge">APPENDIX A · TECHNICAL</div>
       <h1>Technical Reference</h1>
 
       <h2>Model Context Protocol (MCP)</h2>
@@ -1550,7 +1494,7 @@ def test_get_invoice_cannot_access_other_users_invoice(
       <h2>Project Instructions as System Prompts</h2>
       <p>Project Instructions are implemented as system prompts — the top-level instruction layer in Claude's trust hierarchy:</p>
       <div class="code-block">Anthropic training → Operator system prompt (Project Instructions) → User messages</div>
-      <p>This means Project Instructions are an effective governance tool. A well-written instruction set reliably shapes Claude's behaviour across all conversations in a project. See Section 6 for the template.</p>
+      <p>This means Project Instructions are an effective governance tool. A well-written instruction set reliably shapes Claude's behaviour across all conversations in a project. See Section 5 for the template.</p>
 
       <h2>Claude Code Integration</h2>
       <ul>
